@@ -23,7 +23,7 @@ class Student
     # return a new instance of the Student class
     new_student = Student.new
     student.name = student_row[1]
-    student.grade 
+    student.grade = student_row[2]
   end
 
   def save
