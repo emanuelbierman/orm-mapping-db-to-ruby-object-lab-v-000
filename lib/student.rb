@@ -16,8 +16,11 @@ class Student
     sql = <<-SQL
     SELECT * FROM students
     SQL
-    student_row = DB[:conn].execute(sql).flatten
+    all_students = DB[:conn].execute(sql).flatten
 
+    all_students.map do |student_row|
+            
+    end
     new_student = Student.new
     new_student.name = student_row[1]
     new_student.grade = student_row[2]
