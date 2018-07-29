@@ -18,8 +18,8 @@ class Student
     SQL
     all_students = DB[:conn].execute(sql).flatten
 
-    all_students.map do |student_row|
-            
+    all_students.map do |row_student|
+
     end
     new_student = Student.new
     new_student.name = student_row[1]
