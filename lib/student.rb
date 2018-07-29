@@ -22,7 +22,6 @@ class Student
     SELECT * FROM students WHERE name = ?
     SQL
     student_row = DB[:conn].execute(sql, name).flatten
-    binding.pry
     # return a new instance of the Student class
     new_student = Student.new
     new_student.name = student_row[1]
