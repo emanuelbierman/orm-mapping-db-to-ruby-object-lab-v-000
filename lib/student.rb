@@ -112,7 +112,7 @@ class Student
     LIMIT 1
     SQL
     first_student = DB[:conn].execute(sql)
-
+binding.pry
     first_student.map do |row_student|
       new_student = Student.new
       new_student.id = row_student[0]
