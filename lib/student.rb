@@ -111,9 +111,9 @@ class Student
     WHERE grade = 10
     LIMIT 1
     SQL
-    first_student = DB[:conn].execute(sql)
+    first_student = DB[:conn].execute(sql).flatten
     
-    first_student.flatten.map do |row_student|
+    first_student.map do |row_student|
       new_student = Student.new
       new_student.id = row_student[0]
       new_student.name = row_student[1]
