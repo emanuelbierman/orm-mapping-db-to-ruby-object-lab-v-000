@@ -17,6 +17,7 @@ class Student
     SELECT * FROM students
     SQL
     all_students = DB[:conn].execute(sql)
+    binding.pry
 
     all_students.map do |row_student|
 
