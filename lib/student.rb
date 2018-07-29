@@ -118,9 +118,5 @@ class Student
     new_student.name = first_student[1]
     new_student.grade = first_student[2]
     new_student
-
-    first_student.map do |row_student|
-
-    end
   end
 end
