@@ -112,13 +112,15 @@ class Student
     LIMIT 1
     SQL
     first_student = DB[:conn].execute(sql).flatten
-    
+
+    new_student = Student.new
+    new_student.id = first_student[0]
+    new_student.name = first_student[1]
+    new_student.grade = first_student[2]
+    new_student
+
     first_student.map do |row_student|
-      new_student = Student.new
-      new_student.id = row_student[0]
-      new_student.name = row_student[1]
-      new_student.grade = row_student[2]
-      new_student
+
     end
   end
 end
