@@ -87,6 +87,5 @@ class Student
       new_student.grade = row_student[2]
       new_student
     end
-    
   end
 end
