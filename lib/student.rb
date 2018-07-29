@@ -21,6 +21,9 @@ class Student
     SQL
     student_row = DB[:conn].execute(sql, name)
     # return a new instance of the Student class
+    new_student = Student.new
+    student.name = student_row[1]
+    student.grade 
   end
 
   def save
