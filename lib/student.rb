@@ -79,7 +79,14 @@ class Student
     SELECT * FROM students
     WHERE grade < 12
     SQL
-    DB[:conn].execute(sql)
+    below_12_students = DB[:conn].execute(sql)
+
+    below_12_students.map do |row_student|
+      new_student = Student.new
+      new_student.name = row_student[1]
+      new_student.grade = row_student[2]
+      new_student
+    end
     
   end
 end
