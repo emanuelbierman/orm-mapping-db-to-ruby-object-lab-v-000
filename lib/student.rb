@@ -119,4 +119,8 @@ class Student
     new_student.grade = first_student[2]
     new_student
   end
+
+  def self.all_students_in_grade_X(x)
+    
+  end
 end
