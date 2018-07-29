@@ -16,7 +16,7 @@ class Student
     sql = <<-SQL
     SELECT * FROM students
     SQL
-    all_students = DB[:conn].execute(sql).flatten
+    all_students = DB[:conn].execute(sql)
 
     all_students.map do |row_student|
 
