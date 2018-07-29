@@ -93,6 +93,7 @@ class Student
     sql = <<-SQL
     SELECT * FROM students
     WHERE grade = 10
+    LIMIT ?
     SQL
     first_x_students = DB[:conn].execute(sql)
 
