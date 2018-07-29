@@ -115,6 +115,7 @@ class Student
 
     first_x_students.map do |row_student|
       new_student = Student.new
+      new_student.id = row_student[0]
       new_student.name = row_student[1]
       new_student.grade = row_student[2]
       new_student
