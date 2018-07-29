@@ -16,8 +16,8 @@ class Student
     sql = <<-SQL
     SELECT * FROM students
     SQL
-    student_row = DB[:conn].execute(sql, name).flatten
-  
+    student_row = DB[:conn].execute(sql).flatten
+
     new_student = Student.new
     new_student.name = student_row[1]
     new_student.grade = student_row[2]
